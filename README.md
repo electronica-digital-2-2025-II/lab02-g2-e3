@@ -19,7 +19,6 @@ Indice:
 ## Diseño implementado
 
 ### Descripción
-### Descripción
 La Unidad Aritmético-Lógica (ALU, por sus siglas en inglés Arithmetic Logic Unit) es un circuito digital fundamental que actúa como el "corazón computacional" de un sistema de procesamiento, como una Unidad Central de Procesamiento (CPU). Su función principal es realizar operaciones aritméticas y lógicas con datos binarios.
 
 Las ALU basicas suelen incluir operaciones aritmeticas y operaciones logicas, dos entradas, una salida y un selector de operacion llamado opCode, asi como banderas que indican condiciones especiales y una salida llamada zero para indicar un resultado nulo o igual a 0.
@@ -76,7 +75,9 @@ Este corrimiento no cuenta con un modulo debido a la simpleza de la operacion. S
 ## Simulaciones 
 
 ## Implementación
+La implementacion podrá ser encontrada en el siguiente enlace de YouTube: https://www.youtube.com/watch?v=aPgPy2_nd1I
 
+Para cada una de las operaciones, se describe la combiancion del selector y se realizan tres ejemplos, donde se incluyen casos atipicos, como por ejemplo un resultado negativo en la resta donde se evidencia el complemento a 2.
 ## Conclusiones
 
 ## Referencias
