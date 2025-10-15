@@ -81,12 +81,17 @@ Este corrimiento no cuenta con un modulo debido a la simpleza de la operacion. S
 ## Simulaciones 
 Para cada uno de los modulos se contempla una simulacion, sin embargo, en este apartado solo se describirá la simulacion de la ALU completa para no extenderse de forma inncesaria. Aun asi, los archivos Testbench de cada modulo se encuentran presentes en la carpeta **src** de este repositorio.
 
-###Simulacion usando Icarus Verilog
+### Simulacion usando Icarus Verilog
 Con el archivo [Testbench ALU_4bits](/scr/tb_ALU_4bits.v) se procede a simular primero con Icarus Verilog, obteniendo el siguiente resultado.
 
 [![iverilog.png](https://i.postimg.cc/t4nGdXbt/iverilog.png)](https://postimg.cc/XrWP46pp)
 
 Se observa una tabla con los resultados esperados de cada operacion, mostrando valores del selector y tres ejemplos por operacion. Notese que se intentan probar operaciones atipicas, como la de la 4 linea, cuyo resultado da 250.
+
+### Simulacion usando GTK Wave
+[![alugtk.png](https://i.postimg.cc/G2n1X6KD/alugtk.png)](https://postimg.cc/R3d8FsjC)
+
+Para una simulacion mas visual, se usa el GTK Wave que permite identificar las señales de cada una de las operaciones, se observa en la imagen las variables A, B, selector y la salida Y. mostrando todo en formato decimal excepto el selector el cual se encuentra en binario para entenderlo. Para ver mejor la imagen y las señales se recomienda dar click sobre la misma.
 
 ## Implementación
 La implementacion podrá ser encontrada en el siguiente enlace de YouTube: https://www.youtube.com/watch?v=aPgPy2_nd1I
