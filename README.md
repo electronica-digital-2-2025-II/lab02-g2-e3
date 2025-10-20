@@ -41,6 +41,12 @@ El funcionamiento de la ALU es secuencial en el contexto de una instrucción, pe
 - NOR [**011**]
 - Desplazamiento a la izquierda [**100**]
 
+Cabe destacar que este diseño, a pesar de presentar una salida de overlow, sólo cumple una función de verificación de funcionamiento, ya que, en términos prácticos las operaciones realizadas nunca llegan a superar la longitud d ebits de la salida, esto principalmente, porque fue construida para adecuarse a la máxima longitud de bits que presenta una multiplicación ente números de 4 bits: 8 bits.
+
+- Suma máxima (4 bits en ALTO): 1 1110 (5 bits)
+- Resta mínima (0-15): 1111 0001 (Complemento a 2 adaptado a 8 bits)
+- Multiplicación máxima (4 bits en ALTO): 1110 0001 (8 bits)
+
 
 #### Modulos
 
@@ -78,6 +84,8 @@ Este modulo instanciara al de 1 bit para operar bit a bit cada una de las entrad
 Este corrimiento no cuenta con un modulo debido a la simpleza de la operacion. Se opta por aplicarla dentro del propio **Case** para que se desarrolle una vez seleccionada la combinacion correspondiente del selector. 
 ### Diagrama
 
+[![Diagrama_flujo_ALU.drawio (1).png](https://github.com/electronica-digital-2-2025-II/lab02-g2-e3/blob/main/Diagrama_flujo_ALU.drawio%20(1).png?raw=true)](https://github.com/electronica-digital-2-2025-II/lab02-g2-e3/blob/main/Diagrama_flujo_ALU.drawio%20(1).png?raw=true)
+
 ## Simulaciones 
 Para cada uno de los modulos se contempla una simulacion, sin embargo, en este apartado solo se describirá la simulacion de la ALU completa para no extenderse de forma inncesaria. Aun asi, los archivos Testbench de cada modulo se encuentran presentes en la carpeta **src** de este repositorio.
 
@@ -98,5 +106,9 @@ La implementacion podrá ser encontrada en el siguiente enlace de YouTube: https
 
 Para cada una de las operaciones, se describe la combiancion del selector y se realizan tres ejemplos, donde se incluyen casos atipicos, como por ejemplo un resultado negativo en la resta donde se evidencia el complemento a 2.
 ## Conclusiones
+
+- Se estudia el comportamiento de una ALU con eje central en su funcionamiento como multiplexor donde, esencialmnete, funciona a través de selectores controlables que determinan la salida de operaciones.
+- Se observa como la forma de diseño modular como herramienta esencial en la construcción de la ALU en la medida que facilita el proceso de diseñar y agregar módulos sin necesidad de alterar el comportameinto de otras funciones.
+- Se implementan salidas adicionales de interés, como el zero y el overflow, que son auxiliares en determinar el buen funcionamieno de la unidad.
 
 ## Referencias
