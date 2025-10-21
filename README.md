@@ -110,5 +110,21 @@ Para cada una de las operaciones, se describe la combiancion del selector y se r
 - Se estudia el comportamiento de una ALU con eje central en su funcionamiento como multiplexor donde, esencialmnete, funciona a través de selectores controlables que determinan la salida de operaciones.
 - Se observa como la forma de diseño modular como herramienta esencial en la construcción de la ALU en la medida que facilita el proceso de diseñar y agregar módulos sin necesidad de alterar el comportameinto de otras funciones.
 - Se implementan salidas adicionales de interés, como el zero y el overflow, que son auxiliares en determinar el buen funcionamieno de la unidad.
+- La ALU desarrollada cumple exitosamente con las funciones aritméticas y lógicas básicas, demostrando un diseño modular, escalable y fácil de depurar.
+
+- El uso de módulos individuales para cada operación (suma, resta, multiplicación y NOR) permitió validar el funcionamiento por partes y garantizar un desempeño correcto en el sistema completo.
+
+- La inclusión de una salida de 8 bits evitó la aparición de overflow, asegurando resultados correctos incluso en operaciones con altos valores binarios.
+
+- La simulación en Icarus Verilog y la visualización en GTKWave confirmaron el comportamiento esperado de todas las operaciones, validando la lógica combinacional de la ALU.
+
+- El trabajo permitió reforzar conceptos de diseño digital, jerarquía modular, reutilización de componentes y verificación mediante simulación HDL, esenciales para el desarrollo de sistemas digitales más complejos
 
 ## Referencias
+Brown, S., & Vranesic, Z. (2019). Fundamentals of Digital Logic with Verilog Design (4th ed.). McGraw-Hill Education.
+
+Mano, M. M., & Ciletti, M. D. (2017). Digital Design: With an Introduction to the Verilog HDL (6th ed.). Pearson.
+
+Patterson, D. A., & Hennessy, J. L. (2018). Computer Organization and Design: The Hardware/Software Interface (5th ed.). Morgan Kaufmann.
+
+Universidad Nacional de Colombia. (2025). Guía de laboratorio – Unidad Aritmético-Lógica (ALU). Curso de Electrónica Digital II.
